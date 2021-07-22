@@ -6,7 +6,8 @@ User={{ prometheus_postgres_system_user }}
 Environment="DATA_SOURCE_NAME={{ prometheus_postgres_data_source_name }}"
 ExecStart=/opt/prometheus/postgres_exporter/postgres_exporter \
     --extend.query-path /etc/prometheus/postgres-queries.yml \
-    --web.listen-address :{{ prometheus_postgres_port }}
+    --web.listen-address :{{ prometheus_postgres_port }} \
+    --web.config.file /etc/prometheus/web-config.yml
 
 [Install]
 WantedBy=multi-user.target

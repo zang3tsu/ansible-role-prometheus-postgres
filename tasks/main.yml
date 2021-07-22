@@ -63,6 +63,15 @@
   notify:
     - restart prometheus-postgres
 
+- name: prometheus postgres | web config
+  become: true
+  template:
+    dest: /etc/prometheus/web-config.yml
+    src: web-config.yml.j2
+    mode: 0644
+  notify:
+    - restart prometheus-postgres
+
 - name: prometheus postgres | server systemd service
   become: true
   template:

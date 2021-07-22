@@ -1,9 +1,9 @@
 ---
 # defaults file for prometheus-postgres
 
-prometheus_postgres_version: 0.9.0
+prometheus_postgres_version: 0.10.0
 prometheus_postgres_sha256: >-
-  ff541bd3ee19c0ae003d71424a75edfcc8695e828dd20d5b4555ce433c89d60b
+  1d1a008c5e29673b404a9ce119b7516fa59974aeda2f47d4a0446d102abce8a1
 
 prometheus_postgres_dbname: postgres
 prometheus_postgres_data_source_name: "user=postgres dbname=\
