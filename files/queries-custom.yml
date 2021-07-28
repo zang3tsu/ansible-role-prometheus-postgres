@@ -1,10 +1,9 @@
-active_users_count:
+active_users:
   query: |
     SELECT COUNT(*)
     FROM users_user
     WHERE (now() - interval '60 seconds') < last_login AND last_login <= now()
-    AS active_users_count
   metrics:
-    - active_users_count:
+    - count:
         usage: "GAUGE"
         description: "Active users count"
