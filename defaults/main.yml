@@ -13,6 +13,7 @@ prometheus_postgres_port: 9187
 
 prometheus_postgres_query_filenames:
   - queries-default.yml
+  - queries-custom.yml
 
 prometheus_postgres_query_directory: files/
 
